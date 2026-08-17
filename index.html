@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="icon" type="image/png" href="logo-white.png" />
 
   <style>
     :root {
@@ -28,15 +29,9 @@
       --radius: 24px;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: "Poppins", sans-serif;
@@ -46,42 +41,16 @@
       overflow-x: hidden;
     }
 
-    img {
-      display: block;
-      max-width: 100%;
-    }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    section[id] { scroll-margin-top: 90px; }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+    .container { width: min(1180px, 92%); margin-inline: auto; }
+    .section { padding: 92px 0; }
 
-    ul {
-      list-style: none;
-    }
-
-    section[id] {
-      scroll-margin-top: 90px;
-    }
-
-    .container {
-      width: min(1180px, 92%);
-      margin-inline: auto;
-    }
-
-    .section {
-      padding: 92px 0;
-    }
-
-    .section-head {
-      max-width: 720px;
-      margin-bottom: 42px;
-    }
-
-    .section-head.center {
-      margin-inline: auto;
-      text-align: center;
-    }
+    .section-head { max-width: 720px; margin-bottom: 42px; }
+    .section-head.center { margin-inline: auto; text-align: center; }
 
     .kicker {
       display: inline-block;
@@ -100,10 +69,7 @@
       margin-bottom: 14px;
     }
 
-    .section-head p {
-      color: var(--muted);
-      font-size: 1.02rem;
-    }
+    .section-head p { color: var(--muted); font-size: 1.02rem; }
 
     .btn {
       display: inline-flex;
@@ -135,9 +101,7 @@
       backdrop-filter: blur(10px);
     }
 
-    .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.12);
-    }
+    .btn-secondary:hover { background: rgba(255, 255, 255, 0.12); }
 
     .panel {
       background: var(--white);
@@ -160,13 +124,8 @@
       color: var(--white);
     }
 
-    .dark .section-head h2 {
-      color: var(--white);
-    }
-
-    .dark .section-head p {
-      color: rgba(255, 255, 255, 0.74);
-    }
+    .dark .section-head h2 { color: var(--white); }
+    .dark .section-head p { color: rgba(255, 255, 255, 0.74); }
 
     header {
       position: fixed;
@@ -195,21 +154,11 @@
       letter-spacing: 0.04em;
     }
 
-    .brand span {
-      color: var(--accent);
-    }
+    .brand span { color: var(--accent); }
 
-    .brand-logo {
-      height: 46px;
-      width: auto;
-      display: none;
-    }
+    .brand-logo { height: 46px; width: auto; display: none; }
 
-    .menu {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-    }
+    .menu { display: flex; align-items: center; gap: 28px; }
 
     .menu a {
       color: rgba(255, 255, 255, 0.82);
@@ -218,9 +167,7 @@
       transition: 0.25s ease;
     }
 
-    .menu a:hover {
-      color: var(--accent);
-    }
+    .menu a:hover { color: var(--accent); }
 
     .burger {
       display: none;
@@ -264,18 +211,16 @@
       align-items: center;
     }
 
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 9px 15px;
-      border-radius: 999px;
-      background: rgba(255, 159, 28, 0.11);
-      border: 1px solid rgba(255, 159, 28, 0.22);
-      color: var(--accent);
-      font-size: 0.88rem;
-      font-weight: 700;
-      margin-bottom: 18px;
+    .hero-copy {
+      text-align: center;
+    }
+
+    .hero-logo {
+      display: block;
+      height: 120px;
+      width: auto;
+      margin: 0 auto 26px;
+      filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.35));
     }
 
     .hero h1 {
@@ -291,6 +236,7 @@
       color: rgba(255, 255, 255, 0.78);
       font-size: 1.08rem;
       margin-bottom: 28px;
+      margin-inline: auto;
     }
 
     .hero-actions {
@@ -298,6 +244,7 @@
       flex-wrap: wrap;
       gap: 14px;
       margin-bottom: 28px;
+      justify-content: center;
     }
 
     .hero-stats {
@@ -305,6 +252,7 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 14px;
       max-width: 680px;
+      margin-inline: auto;
     }
 
     .stat {
@@ -313,20 +261,11 @@
       background: rgba(255, 255, 255, 0.07);
       border: 1px solid rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(10px);
+      text-align: center;
     }
 
-    .stat strong {
-      display: block;
-      color: var(--white);
-      font-size: 1.16rem;
-      line-height: 1.3;
-      margin-bottom: 4px;
-    }
-
-    .stat span {
-      color: #b9c8e6;
-      font-size: 0.88rem;
-    }
+    .stat strong { display: block; color: var(--white); font-size: 1.16rem; line-height: 1.3; margin-bottom: 4px; }
+    .stat span { color: #b9c8e6; font-size: 0.88rem; }
 
     .hero-panel {
       position: relative;
@@ -338,11 +277,7 @@
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
     }
 
-    .hero-panel img {
-      width: 100%;
-      height: 520px;
-      object-fit: cover;
-    }
+    .hero-panel img { width: 100%; height: 520px; object-fit: cover; }
 
     .hero-panel-placeholder {
       min-height: 520px;
@@ -363,57 +298,67 @@
       backdrop-filter: blur(16px);
     }
 
-    .hero-card h3 {
-      color: var(--white);
-      font-size: 1rem;
-      margin-bottom: 6px;
+    .hero-card h3 { color: var(--white); font-size: 1rem; margin-bottom: 6px; }
+    .hero-card p { color: rgba(255, 255, 255, 0.74); font-size: 0.92rem; }
+
+    /* ===== slideshow berjalan ===== */
+    .marquee { position: relative; overflow: hidden; padding: 10px 0; }
+
+    .marquee::before,
+    .marquee::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 120px;
+      z-index: 2;
+      pointer-events: none;
     }
 
-    .hero-card p {
-      color: rgba(255, 255, 255, 0.74);
-      font-size: 0.92rem;
+    .marquee::before { left: 0; background: linear-gradient(to right, #ffffff, transparent); }
+    .marquee::after { right: 0; background: linear-gradient(to left, #ffffff, transparent); }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee 45s linear infinite;
     }
 
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1.03fr 0.97fr;
-      gap: 24px;
-      align-items: start;
+    .marquee:hover .marquee-track { animation-play-state: paused; }
+
+    .marquee-track img {
+      flex: 0 0 auto;
+      height: 230px;
+      width: 340px;
+      object-fit: cover;
+      border-radius: 18px;
+      margin-right: 18px;
+      box-shadow: 0 14px 34px rgba(15, 44, 89, 0.12);
+      cursor: zoom-in;
     }
 
-    .about-panel {
-      padding: 30px;
-      height: 100%;
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
     }
+
+    .showcase-actions { display: flex; justify-content: center; margin-top: 34px; }
+
+    .about-grid { display: grid; grid-template-columns: 1.03fr 0.97fr; gap: 24px; align-items: start; }
+
+    .about-panel { padding: 30px; height: 100%; }
 
     .about-panel h3,
     .feature h3,
     .contact-panel h3,
-    .cta h3 {
-      color: var(--text-dark);
-    }
+    .cta h3 { color: var(--text-dark); }
 
-    .about-panel h3 {
-      font-size: 1.45rem;
-      margin-bottom: 14px;
-    }
+    .about-panel h3 { font-size: 1.45rem; margin-bottom: 14px; }
+    .about-panel p { color: var(--muted); }
 
-    .about-panel p {
-      color: var(--muted);
-    }
+    .list { margin-top: 22px; display: grid; gap: 14px; }
 
-    .list {
-      margin-top: 22px;
-      display: grid;
-      gap: 14px;
-    }
-
-    .list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      color: var(--text);
-    }
+    .list li { display: flex; align-items: flex-start; gap: 12px; color: var(--text); }
 
     .list i {
       width: 30px;
@@ -427,15 +372,9 @@
       margin-top: 2px;
     }
 
-    .features {
-      background: linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%);
-    }
+    .features { background: linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%); }
 
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 22px;
-    }
+    .feature-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
 
     .feature {
       padding: 26px;
@@ -446,10 +385,7 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .feature:hover {
-      transform: translateY(-7px);
-      box-shadow: 0 24px 55px rgba(15, 44, 89, 0.12);
-    }
+    .feature:hover { transform: translateY(-7px); box-shadow: 0 24px 55px rgba(15, 44, 89, 0.12); }
 
     .icon {
       width: 54px;
@@ -463,22 +399,10 @@
       font-size: 1.2rem;
     }
 
-    .feature h3 {
-      font-size: 1.08rem;
-      margin-bottom: 10px;
-    }
+    .feature h3 { font-size: 1.08rem; margin-bottom: 10px; }
+    .feature p { color: var(--muted); font-size: 0.95rem; }
 
-    .feature p {
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .tabs {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 30px;
-    }
+    .tabs { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 30px; }
 
     .tab-btn {
       border: 1px solid rgba(255, 255, 255, 0.14);
@@ -493,27 +417,12 @@
     }
 
     .tab-btn:hover,
-    .tab-btn.active {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: #14263f;
-    }
+    .tab-btn.active { background: var(--accent); border-color: var(--accent); color: #14263f; }
 
-    .tab-pane {
-      display: none;
-    }
+    .tab-pane { display: none; }
+    .tab-pane.active { display: block; animation: fadeUp 0.45s ease; }
 
-    .tab-pane.active {
-      display: block;
-      animation: fadeUp 0.45s ease;
-    }
-
-    .service-layout {
-      display: grid;
-      grid-template-columns: 0.92fr 1.08fr;
-      gap: 26px;
-      align-items: stretch;
-    }
+    .service-layout { display: grid; grid-template-columns: 0.92fr 1.08fr; gap: 26px; align-items: stretch; }
 
     .service-media {
       border-radius: 28px;
@@ -538,27 +447,11 @@
         linear-gradient(135deg, #0f2c59, #1d5aa2);
     }
 
-    .service-body {
-      padding: 30px;
-      border-radius: 28px;
-    }
+    .service-body { padding: 30px; border-radius: 28px; }
+    .service-body h3 { color: var(--white); font-size: 1.65rem; margin-bottom: 14px; }
+    .service-body p { color: rgba(255, 255, 255, 0.76); }
 
-    .service-body h3 {
-      color: var(--white);
-      font-size: 1.65rem;
-      margin-bottom: 14px;
-    }
-
-    .service-body p {
-      color: rgba(255, 255, 255, 0.76);
-    }
-
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 24px;
-    }
+    .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
 
     .chip {
       padding: 10px 14px;
@@ -570,11 +463,7 @@
       font-weight: 600;
     }
 
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 
     .gallery-loading,
     .gallery-empty {
@@ -584,7 +473,7 @@
       color: var(--muted);
       border: 1px dashed var(--border);
       border-radius: 22px;
-      background: var(--light);
+      background: var(--white);
     }
 
     .gallery-item {
@@ -594,7 +483,7 @@
       overflow: hidden;
       cursor: zoom-in;
       box-shadow: 0 18px 40px rgba(15, 44, 89, 0.08);
-      background: var(--light);
+      background: var(--white);
     }
 
     .gallery-item img {
@@ -606,20 +495,11 @@
       transition: transform 0.5s ease;
     }
 
-    .gallery-item:hover img {
-      transform: scale(1.08);
-    }
+    .gallery-item:hover img { transform: scale(1.08); }
 
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 22px;
-    }
+    .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
 
-    .process-card {
-      padding: 26px;
-      border-radius: 22px;
-    }
+    .process-card { padding: 26px; border-radius: 22px; }
 
     .process-card .step {
       display: inline-block;
@@ -631,44 +511,16 @@
       margin-bottom: 12px;
     }
 
-    .process-card h3 {
-      color: var(--white);
-      font-size: 1.08rem;
-      margin-bottom: 10px;
-    }
+    .process-card h3 { color: var(--white); font-size: 1.08rem; margin-bottom: 10px; }
+    .process-card p { color: rgba(255, 255, 255, 0.72); font-size: 0.95rem; }
 
-    .process-card p {
-      color: rgba(255, 255, 255, 0.72);
-      font-size: 0.95rem;
-    }
+    .contact-grid { display: grid; grid-template-columns: 0.94fr 1.06fr; gap: 24px; align-items: stretch; }
 
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 0.94fr 1.06fr;
-      gap: 24px;
-      align-items: stretch;
-    }
+    .contact-panel { padding: 30px; }
+    .contact-panel h3 { font-size: 1.45rem; margin-bottom: 12px; }
+    .contact-panel > p { color: var(--muted); margin-bottom: 24px; }
 
-    .contact-panel {
-      padding: 30px;
-    }
-
-    .contact-panel h3 {
-      font-size: 1.45rem;
-      margin-bottom: 12px;
-    }
-
-    .contact-panel > p {
-      color: var(--muted);
-      margin-bottom: 24px;
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      margin-bottom: 18px;
-    }
+    .contact-item { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 18px; }
 
     .contact-item i {
       width: 46px;
@@ -682,15 +534,8 @@
       font-size: 1.05rem;
     }
 
-    .contact-item strong {
-      display: block;
-      color: var(--text-dark);
-      margin-bottom: 3px;
-    }
-
-    .contact-item span {
-      color: var(--muted);
-    }
+    .contact-item strong { display: block; color: var(--text-dark); margin-bottom: 3px; }
+    .contact-item span { color: var(--muted); }
 
     .cta {
       padding: 34px;
@@ -704,41 +549,14 @@
       justify-content: center;
     }
 
-    .cta h3 {
-      color: var(--white);
-      font-size: clamp(1.55rem, 2.6vw, 2.3rem);
-      line-height: 1.25;
-      margin-bottom: 14px;
-    }
+    .cta h3 { color: var(--white); font-size: clamp(1.55rem, 2.6vw, 2.3rem); line-height: 1.25; margin-bottom: 14px; }
+    .cta p { color: rgba(255, 255, 255, 0.78); margin-bottom: 26px; max-width: 560px; }
 
-    .cta p {
-      color: rgba(255, 255, 255, 0.78);
-      margin-bottom: 26px;
-      max-width: 560px;
-    }
+    footer { background: var(--dark); color: #bdd0f0; padding: 34px 0; }
 
-    footer {
-      background: var(--dark);
-      color: #bdd0f0;
-      padding: 34px 0;
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    .footer-brand {
-      font-weight: 800;
-      color: var(--white);
-    }
-
-    .footer-brand span {
-      color: var(--accent);
-    }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 18px; flex-wrap: wrap; }
+    .footer-brand { font-weight: 800; color: var(--white); }
+    .footer-brand span { color: var(--accent); }
 
     .floating-wa {
       position: fixed;
@@ -757,9 +575,7 @@
       transition: transform 0.3s ease;
     }
 
-    .floating-wa:hover {
-      transform: scale(1.08);
-    }
+    .floating-wa:hover { transform: scale(1.08); }
 
     .lightbox {
       position: fixed;
@@ -771,9 +587,7 @@
       z-index: 1200;
     }
 
-    .lightbox.open {
-      display: grid;
-    }
+    .lightbox.open { display: grid; }
 
     .lightbox img {
       width: auto;
@@ -795,55 +609,20 @@
       cursor: pointer;
     }
 
-    .reveal {
-      opacity: 0;
-      transform: translateY(26px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-
-    .reveal.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.show { opacity: 1; transform: translateY(0); }
 
     @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(18px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 1080px) {
-      .feature-grid,
-      .process-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .hero-grid,
-      .about-grid,
-      .service-layout,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-panel img,
-      .hero-panel-placeholder {
-        min-height: 420px;
-        height: 420px;
-      }
-
-      .service-media img,
-      .service-media-placeholder {
-        min-height: 300px;
-      }
+      .feature-grid, .process-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-grid, .about-grid, .service-layout, .contact-grid { grid-template-columns: 1fr; }
+      .hero-panel img, .hero-panel-placeholder { min-height: 420px; height: 420px; }
+      .service-media img, .service-media-placeholder { min-height: 300px; }
     }
 
     @media (max-width: 820px) {
@@ -863,49 +642,19 @@
         box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
       }
 
-      .menu.open {
-        display: flex;
-      }
+      .menu.open { display: flex; }
+      .menu li { width: 100%; }
+      .menu a { display: block; padding: 13px 14px; border-radius: 14px; }
+      .menu a:hover { background: rgba(255, 255, 255, 0.06); }
+      .burger { display: block; }
 
-      .menu li {
-        width: 100%;
-      }
-
-      .menu a {
-        display: block;
-        padding: 13px 14px;
-        border-radius: 14px;
-      }
-
-      .menu a:hover {
-        background: rgba(255, 255, 255, 0.06);
-      }
-
-      .burger {
-        display: block;
-      }
-
-      .hero {
-        padding-top: 125px;
-      }
-
-      .hero-stats {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .feature-grid,
-      .process-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-inner {
-        justify-content: center;
-        text-align: center;
-      }
+      .hero { padding-top: 125px; }
+      .hero-logo { height: 80px; }
+      .hero-stats { grid-template-columns: 1fr; }
+      .marquee-track img { height: 180px; width: 260px; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .feature-grid, .process-grid { grid-template-columns: 1fr; }
+      .footer-inner { justify-content: center; text-align: center; }
     }
   </style>
 </head>
@@ -943,10 +692,12 @@
     <section class="hero" id="home">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <span class="eyebrow">
-            <i class="fa-solid fa-bolt"></i>
-            PT Nikawan Solusindo Sejahtera
-          </span>
+          <img
+            src="logo-white.png"
+            alt="PT Nikawan Solusindo Sejahtera"
+            class="hero-logo"
+            onerror="this.style.display='none';"
+          />
 
           <h1>Solusi Perawatan & Perbaikan Mesin Industri yang Andal dan Profesional</h1>
 
@@ -1018,22 +769,10 @@
             </p>
 
             <ul class="list">
-              <li>
-                <i class="fa-solid fa-check"></i>
-                <span>Solusi menyeluruh untuk kebutuhan maintenance industri.</span>
-              </li>
-              <li>
-                <i class="fa-solid fa-check"></i>
-                <span>Ditangani oleh tim teknis yang berpengalaman di lapangan.</span>
-              </li>
-              <li>
-                <i class="fa-solid fa-check"></i>
-                <span>Mengutamakan kualitas, keamanan, dan kepuasan pelanggan.</span>
-              </li>
-              <li>
-                <i class="fa-solid fa-check"></i>
-                <span>Responsif, komunikatif, dan berorientasi pada solusi.</span>
-              </li>
+              <li><i class="fa-solid fa-check"></i><span>Solusi menyeluruh untuk kebutuhan maintenance industri.</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Ditangani oleh tim teknis yang berpengalaman di lapangan.</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Mengutamakan kualitas, keamanan, dan kepuasan pelanggan.</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Responsif, komunikatif, dan berorientasi pada solusi.</span></li>
             </ul>
           </div>
 
@@ -1045,22 +784,10 @@
             </p>
 
             <ul class="list">
-              <li>
-                <i class="fa-solid fa-eye"></i>
-                <span>Menjadi mitra terpercaya untuk solusi perawatan dan perbaikan mesin industri.</span>
-              </li>
-              <li>
-                <i class="fa-solid fa-gears"></i>
-                <span>Menyediakan layanan preventif yang efisien untuk memperpanjang umur pakai peralatan.</span>
-              </li>
-              <li>
-                <i class="fa-solid fa-shield-halved"></i>
-                <span>Mengedepankan pengujian yang akurat, aman, dan dapat dipertanggungjawabkan.</span>
-              </li>
-              <li>
-                <i class="fa-solid fa-handshake"></i>
-                <span>Membangun hubungan jangka panjang dengan pelanggan melalui layanan yang profesional.</span>
-              </li>
+              <li><i class="fa-solid fa-eye"></i><span>Menjadi mitra terpercaya untuk solusi perawatan dan perbaikan mesin industri.</span></li>
+              <li><i class="fa-solid fa-gears"></i><span>Menyediakan layanan preventif yang efisien untuk memperpanjang umur pakai peralatan.</span></li>
+              <li><i class="fa-solid fa-shield-halved"></i><span>Mengedepankan pengujian yang akurat, aman, dan dapat dipertanggungjawabkan.</span></li>
+              <li><i class="fa-solid fa-handshake"></i><span>Membangun hubungan jangka panjang dengan pelanggan melalui layanan yang profesional.</span></li>
             </ul>
           </div>
         </div>
@@ -1079,43 +806,27 @@
 
         <div class="feature-grid">
           <div class="feature reveal">
-            <div class="icon">
-              <i class="fa-solid fa-layer-group"></i>
-            </div>
+            <div class="icon"><i class="fa-solid fa-layer-group"></i></div>
             <h3>Solusi Komprehensif</h3>
-            <p>
-              Satu mitra untuk kebutuhan perawatan, perbaikan, pengujian, dan improvement peralatan industri.
-            </p>
+            <p>Satu mitra untuk kebutuhan perawatan, perbaikan, pengujian, dan improvement peralatan industri.</p>
           </div>
 
           <div class="feature reveal">
-            <div class="icon">
-              <i class="fa-solid fa-user-gear"></i>
-            </div>
+            <div class="icon"><i class="fa-solid fa-user-gear"></i></div>
             <h3>Tim Berpengalaman</h3>
-            <p>
-              Dikerjakan oleh teknisi yang terbiasa menangani panel listrik, mesin industri, dan utilitas pabrik.
-            </p>
+            <p>Dikerjakan oleh teknisi yang terbiasa menangani panel listrik, mesin industri, dan utilitas pabrik.</p>
           </div>
 
           <div class="feature reveal">
-            <div class="icon">
-              <i class="fa-solid fa-medal"></i>
-            </div>
+            <div class="icon"><i class="fa-solid fa-medal"></i></div>
             <h3>Kualitas Terjaga</h3>
-            <p>
-              Setiap pekerjaan diarahkan pada hasil yang aman, rapi, presisi, dan dapat dipertanggungjawabkan.
-            </p>
+            <p>Setiap pekerjaan diarahkan pada hasil yang aman, rapi, presisi, dan dapat dipertanggungjawabkan.</p>
           </div>
 
           <div class="feature reveal">
-            <div class="icon">
-              <i class="fa-solid fa-headset"></i>
-            </div>
+            <div class="icon"><i class="fa-solid fa-headset"></i></div>
             <h3>Respons Cepat</h3>
-            <p>
-              Komunikasi cepat melalui WhatsApp untuk konsultasi, survei, dan kebutuhan penawaran.
-            </p>
+            <p>Komunikasi cepat melalui WhatsApp untuk konsultasi, survei, dan kebutuhan penawaran.</p>
           </div>
         </div>
       </div>
@@ -1141,11 +852,8 @@
         <div class="tab-pane active" id="perawatan">
           <div class="service-layout">
             <div class="service-media reveal">
-              <img
-                src="assets/layanan-perawatan.jpg"
-                alt="Perawatan panel listrik industri"
-                onerror="this.style.display='none'; this.parentElement.classList.add('service-media-placeholder');"
-              />
+              <img src="assets/layanan-perawatan.jpg" alt="Perawatan panel listrik industri"
+                onerror="this.style.display='none'; this.parentElement.classList.add('service-media-placeholder');" />
             </div>
             <div class="service-body panel reveal">
               <h3>Perawatan Preventif</h3>
@@ -1153,7 +861,6 @@
                 Program perawatan berkala untuk menjaga stabilitas performa aset industri, menekan risiko
                 downtime, dan memperpanjang usia pakai peralatan.
               </p>
-
               <div class="chips">
                 <span class="chip">Panel Tegangan Menengah</span>
                 <span class="chip">Panel Tegangan Rendah</span>
@@ -1168,11 +875,8 @@
         <div class="tab-pane" id="perbaikan">
           <div class="service-layout">
             <div class="service-media">
-              <img
-                src="assets/layanan-perbaikan.jpg"
-                alt="Perbaikan mesin industri"
-                onerror="this.style.display='none'; this.parentElement.classList.add('service-media-placeholder');"
-              />
+              <img src="assets/layanan-perbaikan.jpg" alt="Perbaikan mesin industri"
+                onerror="this.style.display='none'; this.parentElement.classList.add('service-media-placeholder');" />
             </div>
             <div class="service-body panel">
               <h3>Perbaikan & Troubleshooting</h3>
@@ -1180,7 +884,6 @@
                 Analisa gangguan, identifikasi akar masalah, perbaikan komponen elektrikal dan mekanikal,
                 serta uji fungsi untuk mengembalikan operasional secara optimal.
               </p>
-
               <div class="chips">
                 <span class="chip">Analisa Gangguan Panel</span>
                 <span class="chip">Perbaikan Sistem Kontrol</span>
@@ -1194,11 +897,8 @@
         <div class="tab-pane" id="improvement">
           <div class="service-layout">
             <div class="service-media">
-              <img
-                src="assets/layanan-improvement.jpg"
-                alt="Improvement sistem industri"
-                onerror="this.style.display='none'; this.parentElement.classList.add('service-media-placeholder');"
-              />
+              <img src="assets/layanan-improvement.jpg" alt="Improvement sistem industri"
+                onerror="this.style.display='none'; this.parentElement.classList.add('service-media-placeholder');" />
             </div>
             <div class="service-body panel">
               <h3>Improvement & Upgrade</h3>
@@ -1206,7 +906,6 @@
                 Penyesuaian dan peningkatan sistem agar lebih aman, efisien, dan sesuai dengan kebutuhan
                 operasional terbaru.
               </p>
-
               <div class="chips">
                 <span class="chip">Modifikasi Panel</span>
                 <span class="chip">Upgrade Busbar</span>
@@ -1220,11 +919,8 @@
         <div class="tab-pane" id="pengujian">
           <div class="service-layout">
             <div class="service-media">
-              <img
-                src="assets/layanan-pengujian.jpg"
-                alt="Pengujian peralatan listrik"
-                onerror="this.style.display='none'; this.parentElement.classList.add('service-media-placeholder');"
-              />
+              <img src="assets/layanan-pengujian.jpg" alt="Pengujian peralatan listrik"
+                onerror="this.style.display='none'; this.parentElement.classList.add('service-media-placeholder');" />
             </div>
             <div class="service-body panel">
               <h3>Pengujian & Kalibrasi</h3>
@@ -1232,7 +928,6 @@
                 Pengujian teknis untuk memastikan keandalan, keamanan, dan kesiapan operasi peralatan
                 listrik serta sistem pendukungnya.
               </p>
-
               <div class="chips">
                 <span class="chip">IR Test</span>
                 <span class="chip">Hipot Test</span>
@@ -1245,14 +940,33 @@
       </div>
     </section>
 
-    <section class="section" id="galeri">
+    <section class="section" id="showcaseSection" style="display:none;">
       <div class="container">
         <div class="section-head center reveal">
-          <span class="kicker">Galeri Proyek</span>
-          <h2>Dokumentasi pekerjaan dan aktivitas teknis</h2>
-          <p>
-            Galeri ini menampilkan dokumentasi proyek perusahaan secara dinamis.
-          </p>
+          <span class="kicker">Dokumentasi Proyek</span>
+          <h2>Aktivitas & pekerjaan teknis di lapangan</h2>
+          <p>Sebagian dokumentasi proyek kami tampil berjalan di bawah ini.</p>
+        </div>
+      </div>
+
+      <div class="marquee">
+        <div class="marquee-track" id="marqueeTrack"></div>
+      </div>
+
+      <div class="showcase-actions">
+        <a href="#galeri" class="btn btn-primary">
+          <i class="fa-solid fa-images"></i>
+          Lihat Semua Foto
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="galeri" style="background: var(--light);">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="kicker">Galeri</span>
+          <h2>Semua foto proyek</h2>
+          <p>Klik foto untuk melihat lebih besar.</p>
         </div>
 
         <div class="gallery-grid" id="galleryGrid">
@@ -1275,33 +989,25 @@
           <div class="process-card panel reveal">
             <span class="step">Step 01</span>
             <h3>Konsultasi & Survei</h3>
-            <p>
-              Diskusi kebutuhan dan pemeriksaan kondisi aktual di lapangan untuk menentukan pendekatan terbaik.
-            </p>
+            <p>Diskusi kebutuhan dan pemeriksaan kondisi aktual di lapangan untuk menentukan pendekatan terbaik.</p>
           </div>
 
           <div class="process-card panel reveal">
             <span class="step">Step 02</span>
             <h3>Analisa & Penawaran</h3>
-            <p>
-              Penyusunan analisa kebutuhan, ruang lingkup pekerjaan, dan penawaran yang jelas.
-            </p>
+            <p>Penyusunan analisa kebutuhan, ruang lingkup pekerjaan, dan penawaran yang jelas.</p>
           </div>
 
           <div class="process-card panel reveal">
             <span class="step">Step 03</span>
             <h3>Eksekusi & Testing</h3>
-            <p>
-              Pekerjaan dilakukan secara profesional dan dilanjutkan dengan pengujian untuk memastikan hasil.
-            </p>
+            <p>Pekerjaan dilakukan secara profesional dan dilanjutkan dengan pengujian untuk memastikan hasil.</p>
           </div>
 
           <div class="process-card panel reveal">
             <span class="step">Step 04</span>
             <h3>Laporan & Maintenance</h3>
-            <p>
-              Hasil kerja dilengkapi laporan, dokumentasi, serta rekomendasi perawatan lanjutan.
-            </p>
+            <p>Hasil kerja dilengkapi laporan, dokumentasi, serta rekomendasi perawatan lanjutan.</p>
           </div>
         </div>
       </div>
@@ -1313,40 +1019,26 @@
           <div class="contact-panel panel reveal">
             <span class="kicker">Kontak</span>
             <h3>Hubungi Kami</h3>
-            <p>
-              Tim kami siap membantu kebutuhan perawatan, perbaikan, dan pengujian fasilitas industri Anda.
-            </p>
+            <p>Tim kami siap membantu kebutuhan perawatan, perbaikan, dan pengujian fasilitas industri Anda.</p>
 
             <div class="contact-item">
               <i class="fab fa-whatsapp"></i>
-              <div>
-                <strong>WhatsApp</strong>
-                <span>+62 822-4980-4379</span>
-              </div>
+              <div><strong>WhatsApp</strong><span>+62 822-4980-4379</span></div>
             </div>
 
             <div class="contact-item">
               <i class="fa-solid fa-envelope"></i>
-              <div>
-                <strong>Email</strong>
-                <span>info@nikawan-solusindo.com</span>
-              </div>
+              <div><strong>Email</strong><span>info@nikawan-solusindo.com</span></div>
             </div>
 
             <div class="contact-item">
               <i class="fa-solid fa-location-dot"></i>
-              <div>
-                <strong>Lokasi</strong>
-                <span>Tangerang, Indonesia</span>
-              </div>
+              <div><strong>Lokasi</strong><span>Tangerang, Indonesia</span></div>
             </div>
 
             <div class="contact-item">
               <i class="fa-solid fa-clock"></i>
-              <div>
-                <strong>Jam Operasional</strong>
-                <span>Senin - Sabtu, 08.00 - 17.00</span>
-              </div>
+              <div><strong>Jam Operasional</strong><span>Senin - Sabtu, 08.00 - 17.00</span></div>
             </div>
           </div>
 
@@ -1368,12 +1060,8 @@
 
   <footer>
     <div class="container footer-inner">
-      <div class="footer-brand">
-        NIKA<span>WAN</span> SOLUSINDO
-      </div>
-      <div>
-        &copy; 2026 PT Nikawan Solusindo Sejahtera. All Rights Reserved.
-      </div>
+      <div class="footer-brand">NIKA<span>WAN</span> SOLUSINDO</div>
+      <div>&copy; 2026 PT Nikawan Solusindo Sejahtera. All Rights Reserved.</div>
     </div>
   </footer>
 
@@ -1388,224 +1076,6 @@
     <img id="lightboxImage" src="" alt="Preview galeri" />
   </div>
 
-  <script>
-    /* ============ PENGATURAN GALERI ============ */
-    const DRIVE_API_KEY   = "AIzaSyBBrcxsLkbVLrDRWyQJQsLISYKmi7nspGw";
-    const DRIVE_FOLDER_ID = "1GJ5EL9QpbVxcJEtO4TEsOR2qH_TWnEgR";
-    const GALLERY_LIMIT   = 0; // 0 = tampilkan semua foto tanpa batas
-
-    /* ============ menu mobile ============ */
-    const menuToggle = document.getElementById("menuToggle");
-    const navMenu = document.getElementById("navMenu");
-    const menuIcon = menuToggle.querySelector("i");
-
-    menuToggle.addEventListener("click", () => {
-      navMenu.classList.toggle("open");
-      menuIcon.classList.toggle("fa-bars");
-      menuIcon.classList.toggle("fa-xmark");
-    });
-
-    document.querySelectorAll(".menu a").forEach((link) => {
-      link.addEventListener("click", () => {
-        navMenu.classList.remove("open");
-        menuIcon.classList.add("fa-bars");
-        menuIcon.classList.remove("fa-xmark");
-      });
-    });
-
-    /* ============ tabs ============ */
-    const tabButtons = document.querySelectorAll(".tab-btn");
-    const tabPanes = document.querySelectorAll(".tab-pane");
-
-    tabButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        tabButtons.forEach((btn) => btn.classList.remove("active"));
-        tabPanes.forEach((pane) => pane.classList.remove("active"));
-
-        button.classList.add("active");
-        document.getElementById(button.dataset.tab).classList.add("active");
-        observeReveal();
-      });
-    });
-
-    /* ============ lightbox ============ */
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImage = document.getElementById("lightboxImage");
-    const lightboxClose = document.getElementById("lightboxClose");
-
-    function openLightbox(src) {
-      lightboxImage.src = src;
-      lightbox.classList.add("open");
-      document.body.style.overflow = "hidden";
-    }
-
-    function closeLightbox() {
-      lightbox.classList.remove("open");
-      document.body.style.overflow = "";
-    }
-
-    lightboxClose.addEventListener("click", closeLightbox);
-
-    lightbox.addEventListener("click", (e) => {
-      if (e.target === lightbox) closeLightbox();
-    });
-
-    window.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && lightbox.classList.contains("open")) {
-        closeLightbox();
-      }
-    });
-
-    /* ============ animasi reveal ============ */
-    const revealObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.16 }
-    );
-
-    function observeReveal() {
-      document.querySelectorAll(".reveal:not([data-reveal])").forEach((el) => {
-        el.dataset.reveal = "true";
-        revealObserver.observe(el);
-      });
-    }
-
-    observeReveal();
-
-    /* ============ galeri ============ */
-    const galleryGrid = document.getElementById("galleryGrid");
-
-    galleryGrid.addEventListener("click", (event) => {
-      const item = event.target.closest(".gallery-item");
-      if (!item) return;
-
-      const img = item.querySelector("img");
-      if (img) openLightbox(img.src);
-    });
-
-    const IMAGE_PATTERN = /\.(png|jpe?g|webp|gif|svg|avif)$/i;
-
-    function applyLimit(images) {
-      return GALLERY_LIMIT > 0 ? images.slice(0, GALLERY_LIMIT) : images;
-    }
-
-    function renderGallery(images) {
-      galleryGrid.innerHTML = "";
-
-      if (!images.length) {
-        galleryGrid.innerHTML = '<div class="gallery-empty">Belum ada foto di galeri.</div>';
-        return;
-      }
-
-      images.forEach((src, index) => {
-        const figure = document.createElement("figure");
-        figure.className = "gallery-item reveal";
-
-        const img = document.createElement("img");
-        img.src = src;
-        img.alt = "Dokumentasi proyek " + (index + 1);
-        img.loading = "lazy";
-
-        figure.appendChild(img);
-        galleryGrid.appendChild(figure);
-      });
-
-      observeReveal();
-    }
-
-    /* --- sumber 1: Google Drive --- */
-    async function loadDriveGallery() {
-      if (!DRIVE_API_KEY || !DRIVE_FOLDER_ID) return false;
-
-      try {
-        const q = `'${DRIVE_FOLDER_ID}' in parents and mimeType contains 'image/' and trashed=false`;
-        const url =
-          "https://www.googleapis.com/drive/v3/files?q=" + encodeURIComponent(q) +
-          "&orderBy=createdTime+desc&pageSize=100&fields=files(id,name,createdTime)&key=" + DRIVE_API_KEY;
-
-        const response = await fetch(url);
-        if (!response.ok) return false;
-
-        const data = await response.json();
-        const images = applyLimit(
-          (data.files || []).map((file) => "https://lh3.googleusercontent.com/d/" + file.id)
-        );
-
-        if (images.length) {
-          renderGallery(images);
-          return true;
-        }
-      } catch (error) {}
-
-      return false;
-    }
-
-    /* --- sumber 2: folder GitHub "galeri" --- */
-    async function loadGithubGallery() {
-      const host = window.location.hostname;
-
-      if (!host.endsWith(".github.io")) return false;
-
-      const owner = host.split(".")[0];
-      const pathParts = window.location.pathname.split("/").filter(Boolean);
-
-      let repo = host;
-
-      if (pathParts[0] && !/\.(html?|xml|json|txt)$/i.test(pathParts[0])) {
-        repo = pathParts[0];
-      }
-
-      const endpoints = [
-        `https://api.github.com/repos/${owner}/${repo}/contents/galeri`,
-        `https://api.github.com/repos/${owner}/${repo}/contents/galeri?ref=main`,
-        `https://api.github.com/repos/${owner}/${repo}/contents/galeri?ref=master`,
-        `https://api.github.com/repos/${owner}/${repo}/contents/galeri?ref=gh-pages`
-      ];
-
-      for (const endpoint of endpoints) {
-        try {
-          const response = await fetch(endpoint, {
-            headers: { Accept: "application/vnd.github+json" }
-          });
-
-          if (!response.ok) continue;
-
-          const files = await response.json();
-          if (!Array.isArray(files)) continue;
-
-          const images = applyLimit(
-            files
-              .filter((file) => file.type === "file" && IMAGE_PATTERN.test(file.name))
-              .sort((a, b) => a.name.localeCompare(b.name))
-              .map((file) => file.download_url)
-              .filter(Boolean)
-          );
-
-          if (images.length) {
-            renderGallery(images);
-            return true;
-          }
-        } catch (error) {
-          continue;
-        }
-      }
-
-      return false;
-    }
-
-    async function loadGallery() {
-      if (await loadDriveGallery()) return;
-      if (await loadGithubGallery()) return;
-      renderGallery([]);
-    }
-
-    loadGallery();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
