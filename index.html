@@ -1389,6 +1389,12 @@
   </div>
 
   <script>
+    /* ============ PENGATURAN GALERI ============ */
+    const DRIVE_API_KEY   = "AIzaSyBBrcxsLkbVLrDRWyQJQsLISYKmi7nspGw";
+    const DRIVE_FOLDER_ID = "1GJ5EL9QpbVxcJEtO4TEsOR2qH_TWnEgR";
+    const GALLERY_LIMIT   = 0; // 0 = tampilkan semua foto tanpa batas
+
+    /* ============ menu mobile ============ */
     const menuToggle = document.getElementById("menuToggle");
     const navMenu = document.getElementById("navMenu");
     const menuIcon = menuToggle.querySelector("i");
@@ -1407,6 +1413,7 @@
       });
     });
 
+    /* ============ tabs ============ */
     const tabButtons = document.querySelectorAll(".tab-btn");
     const tabPanes = document.querySelectorAll(".tab-pane");
 
@@ -1421,6 +1428,7 @@
       });
     });
 
+    /* ============ lightbox ============ */
     const lightbox = document.getElementById("lightbox");
     const lightboxImage = document.getElementById("lightboxImage");
     const lightboxClose = document.getElementById("lightboxClose");
@@ -1448,6 +1456,7 @@
       }
     });
 
+    /* ============ animasi reveal ============ */
     const revealObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -1469,6 +1478,7 @@
 
     observeReveal();
 
+    /* ============ galeri ============ */
     const galleryGrid = document.getElementById("galleryGrid");
 
     galleryGrid.addEventListener("click", (event) => {
@@ -1480,6 +1490,10 @@
     });
 
     const IMAGE_PATTERN = /\.(png|jpe?g|webp|gif|svg|avif)$/i;
+
+    function applyLimit(images) {
+      return GALLERY_LIMIT > 0 ? images.slice(0, GALLERY_LIMIT) : images;
+    }
 
     function renderGallery(images) {
       galleryGrid.innerHTML = "";
@@ -1505,12 +1519,38 @@
       observeReveal();
     }
 
+    /* --- sumber 1: Google Drive --- */
+    async function loadDriveGallery() {
+      if (!DRIVE_API_KEY || !DRIVE_FOLDER_ID) return false;
+
+      try {
+        const q = `'${DRIVE_FOLDER_ID}' in parents and mimeType contains 'image/' and trashed=false`;
+        const url =
+          "https://www.googleapis.com/drive/v3/files?q=" + encodeURIComponent(q) +
+          "&orderBy=createdTime+desc&pageSize=100&fields=files(id,name,createdTime)&key=" + DRIVE_API_KEY;
+
+        const response = await fetch(url);
+        if (!response.ok) return false;
+
+        const data = await response.json();
+        const images = applyLimit(
+          (data.files || []).map((file) => "https://lh3.googleusercontent.com/d/" + file.id)
+        );
+
+        if (images.length) {
+          renderGallery(images);
+          return true;
+        }
+      } catch (error) {}
+
+      return false;
+    }
+
+    /* --- sumber 2: folder GitHub "galeri" --- */
     async function loadGithubGallery() {
       const host = window.location.hostname;
 
-      if (!host.endsWith(".github.io")) {
-        return false;
-      }
+      if (!host.endsWith(".github.io")) return false;
 
       const owner = host.split(".")[0];
       const pathParts = window.location.pathname.split("/").filter(Boolean);
@@ -1531,22 +1571,21 @@
       for (const endpoint of endpoints) {
         try {
           const response = await fetch(endpoint, {
-            headers: {
-              Accept: "application/vnd.github+json"
-            }
+            headers: { Accept: "application/vnd.github+json" }
           });
 
           if (!response.ok) continue;
 
           const files = await response.json();
-
           if (!Array.isArray(files)) continue;
 
-          const images = files
-            .filter((file) => file.type === "file" && IMAGE_PATTERN.test(file.name))
-            .sort((a, b) => a.name.localeCompare(b.name))
-            .map((file) => file.download_url)
-            .filter(Boolean);
+          const images = applyLimit(
+            files
+              .filter((file) => file.type === "file" && IMAGE_PATTERN.test(file.name))
+              .sort((a, b) => a.name.localeCompare(b.name))
+              .map((file) => file.download_url)
+              .filter(Boolean)
+          );
 
           if (images.length) {
             renderGallery(images);
@@ -1561,11 +1600,9 @@
     }
 
     async function loadGallery() {
-      const loadedFromGithub = await loadGithubGallery();
-
-      if (!loadedFromGithub) {
-        renderGallery([]);
-      }
+      if (await loadDriveGallery()) return;
+      if (await loadGithubGallery()) return;
+      renderGallery([]);
     }
 
     loadGallery();
