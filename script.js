@@ -92,13 +92,15 @@ const galleryGrid = document.getElementById("galleryGrid");
 const showcaseSection = document.getElementById("showcaseSection");
 const marqueeTrack = document.getElementById("marqueeTrack");
 
-galleryGrid.addEventListener("click", (event) => {
-  const item = event.target.closest(".gallery-item");
-  if (!item) return;
+if (galleryGrid) {
+  galleryGrid.addEventListener("click", (event) => {
+    const item = event.target.closest(".gallery-item");
+    if (!item) return;
 
-  const img = item.querySelector("img");
-  if (img) openLightbox(img.src);
-});
+    const img = item.querySelector("img");
+    if (img) openLightbox(img.src);
+  });
+}
 
 const IMAGE_PATTERN = /\.(png|jpe?g|webp|gif|svg|avif)$/i;
 
@@ -107,6 +109,8 @@ function applyLimit(images) {
 }
 
 function renderGallery(images) {
+  if (!galleryGrid) return;
+
   galleryGrid.innerHTML = "";
 
   if (!images.length) {
@@ -131,6 +135,8 @@ function renderGallery(images) {
 }
 
 function renderShowcase(images) {
+  if (!showcaseSection || !marqueeTrack) return;
+
   if (!images.length) {
     showcaseSection.style.display = "none";
     return;
@@ -184,7 +190,7 @@ async function getGithubImages() {
 
   let repo = host;
 
-  if (pathParts[0] && !/\.(html?|xml|json|txt)$/i.test(pathParts[0])) {
+  if (pathParts.length > 1 && !/\.(html?|xml|json|txt)$/i.test(pathParts[0])) {
     repo = pathParts[0];
   }
 
