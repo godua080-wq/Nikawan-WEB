@@ -1,0 +1,1574 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PT Nikawan Solusindo Sejahtera | Solusi Perawatan & Perbaikan Mesin Industri</title>
+  <meta name="description" content="PT Nikawan Solusindo Sejahtera menyediakan jasa perawatan preventif, perbaikan mesin industri, panel listrik, pengujian, dan improvement untuk kebutuhan industri." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <style>
+    :root {
+      --primary: #0f2c59;
+      --primary-2: #123968;
+      --dark: #071228;
+      --accent: #ff9f1c;
+      --accent-2: #ffb443;
+      --text: #42526d;
+      --text-dark: #10294e;
+      --muted: #5c6b84;
+      --light: #f4f7fc;
+      --white: #ffffff;
+      --border: #e8eef9;
+      --shadow: 0 18px 50px rgba(15, 44, 89, 0.08);
+      --radius: 24px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    section[id] {
+      scroll-margin-top: 90px;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin-inline: auto;
+    }
+
+    .section {
+      padding: 92px 0;
+    }
+
+    .section-head {
+      max-width: 720px;
+      margin-bottom: 42px;
+    }
+
+    .section-head.center {
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .kicker {
+      display: inline-block;
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-bottom: 10px;
+    }
+
+    .section-head h2 {
+      color: var(--text-dark);
+      font-size: clamp(1.9rem, 3.4vw, 3rem);
+      line-height: 1.18;
+      margin-bottom: 14px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 13px 26px;
+      border-radius: 16px;
+      font-weight: 700;
+      transition: 0.3s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent-2), var(--accent));
+      color: #13233f;
+      box-shadow: 0 14px 34px rgba(255, 159, 28, 0.25);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 40px rgba(255, 159, 28, 0.32);
+    }
+
+    .btn-secondary {
+      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .panel {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .dark .panel {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: none;
+      backdrop-filter: blur(12px);
+    }
+
+    .dark {
+      background:
+        radial-gradient(circle at top right, rgba(255, 159, 28, 0.09), transparent 26%),
+        linear-gradient(180deg, #071228 0%, #0a1c3a 100%);
+      color: var(--white);
+    }
+
+    .dark .section-head h2 {
+      color: var(--white);
+    }
+
+    .dark .section-head p {
+      color: rgba(255, 255, 255, 0.74);
+    }
+
+    header {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 1000;
+      background: rgba(7, 18, 40, 0.78);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .topbar {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      min-height: 46px;
+      color: var(--white);
+      font-weight: 800;
+      font-size: 1.06rem;
+      letter-spacing: 0.04em;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .brand-logo {
+      height: 46px;
+      width: auto;
+      display: none;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .menu a {
+      color: rgba(255, 255, 255, 0.82);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: 0.25s ease;
+    }
+
+    .menu a:hover {
+      color: var(--accent);
+    }
+
+    .burger {
+      display: none;
+      border: 0;
+      background: transparent;
+      color: var(--white);
+      font-size: 1.45rem;
+      cursor: pointer;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 150px 0 90px;
+      background:
+        radial-gradient(circle at 85% 20%, rgba(255, 159, 28, 0.14), transparent 28%),
+        radial-gradient(circle at 15% 80%, rgba(29, 90, 162, 0.22), transparent 32%),
+        linear-gradient(135deg, #051024 0%, #0a1c3a 55%, #0f2c59 100%);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 159, 28, 0.2), transparent 70%);
+      right: -80px;
+      top: 100px;
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 15px;
+      border-radius: 999px;
+      background: rgba(255, 159, 28, 0.11);
+      border: 1px solid rgba(255, 159, 28, 0.22);
+      color: var(--accent);
+      font-size: 0.88rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      color: var(--white);
+      font-size: clamp(2.35rem, 5vw, 4.35rem);
+      line-height: 1.08;
+      margin-bottom: 18px;
+      letter-spacing: -0.03em;
+    }
+
+    .hero p.lead {
+      max-width: 680px;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 1.08rem;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      max-width: 680px;
+    }
+
+    .stat {
+      padding: 17px 16px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--white);
+      font-size: 1.16rem;
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+
+    .stat span {
+      color: #b9c8e6;
+      font-size: 0.88rem;
+    }
+
+    .hero-panel {
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+      border-radius: 30px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+    }
+
+    .hero-panel img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+    }
+
+    .hero-panel-placeholder {
+      min-height: 520px;
+      background:
+        radial-gradient(circle at top right, rgba(255, 159, 28, 0.22), transparent 30%),
+        linear-gradient(135deg, #0f2c59, #1d5aa2);
+    }
+
+    .hero-card {
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+      padding: 18px;
+      border-radius: 20px;
+      background: rgba(7, 18, 40, 0.68);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(16px);
+    }
+
+    .hero-card h3 {
+      color: var(--white);
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .hero-card p {
+      color: rgba(255, 255, 255, 0.74);
+      font-size: 0.92rem;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.03fr 0.97fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .about-panel {
+      padding: 30px;
+      height: 100%;
+    }
+
+    .about-panel h3,
+    .feature h3,
+    .contact-panel h3,
+    .cta h3 {
+      color: var(--text-dark);
+    }
+
+    .about-panel h3 {
+      font-size: 1.45rem;
+      margin-bottom: 14px;
+    }
+
+    .about-panel p {
+      color: var(--muted);
+    }
+
+    .list {
+      margin-top: 22px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: var(--text);
+    }
+
+    .list i {
+      width: 30px;
+      height: 30px;
+      flex: 0 0 30px;
+      display: grid;
+      place-items: center;
+      border-radius: 999px;
+      color: var(--accent);
+      background: rgba(255, 159, 28, 0.12);
+      margin-top: 2px;
+    }
+
+    .features {
+      background: linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%);
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .feature {
+      padding: 26px;
+      border-radius: 22px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 24px 55px rgba(15, 44, 89, 0.12);
+    }
+
+    .icon {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border-radius: 17px;
+      margin-bottom: 18px;
+      color: var(--white);
+      background: linear-gradient(135deg, var(--primary), #1d5aa2);
+      font-size: 1.2rem;
+    }
+
+    .feature h3 {
+      font-size: 1.08rem;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    .tab-btn {
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.05);
+      color: #dce7fb;
+      padding: 12px 19px;
+      border-radius: 999px;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .tab-btn:hover,
+    .tab-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #14263f;
+    }
+
+    .tab-pane {
+      display: none;
+    }
+
+    .tab-pane.active {
+      display: block;
+      animation: fadeUp 0.45s ease;
+    }
+
+    .service-layout {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 26px;
+      align-items: stretch;
+    }
+
+    .service-media {
+      border-radius: 28px;
+      overflow: hidden;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+    }
+
+    .service-media img {
+      width: 100%;
+      height: 100%;
+      min-height: 360px;
+      object-fit: cover;
+      border-radius: 28px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .service-media-placeholder {
+      min-height: 360px;
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at top right, rgba(255, 159, 28, 0.18), transparent 30%),
+        linear-gradient(135deg, #0f2c59, #1d5aa2);
+    }
+
+    .service-body {
+      padding: 30px;
+      border-radius: 28px;
+    }
+
+    .service-body h3 {
+      color: var(--white);
+      font-size: 1.65rem;
+      margin-bottom: 14px;
+    }
+
+    .service-body p {
+      color: rgba(255, 255, 255, 0.76);
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .chip {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #e8f0ff;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .gallery-loading,
+    .gallery-empty {
+      grid-column: 1 / -1;
+      padding: 36px;
+      text-align: center;
+      color: var(--muted);
+      border: 1px dashed var(--border);
+      border-radius: 22px;
+      background: var(--light);
+    }
+
+    .gallery-item {
+      position: relative;
+      min-height: 250px;
+      border-radius: 22px;
+      overflow: hidden;
+      cursor: zoom-in;
+      box-shadow: 0 18px 40px rgba(15, 44, 89, 0.08);
+      background: var(--light);
+    }
+
+    .gallery-item img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .process-card {
+      padding: 26px;
+      border-radius: 22px;
+    }
+
+    .process-card .step {
+      display: inline-block;
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .process-card h3 {
+      color: var(--white);
+      font-size: 1.08rem;
+      margin-bottom: 10px;
+    }
+
+    .process-card p {
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 0.95rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.94fr 1.06fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .contact-panel {
+      padding: 30px;
+    }
+
+    .contact-panel h3 {
+      font-size: 1.45rem;
+      margin-bottom: 12px;
+    }
+
+    .contact-panel > p {
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .contact-item i {
+      width: 46px;
+      height: 46px;
+      flex: 0 0 46px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      background: rgba(15, 44, 89, 0.08);
+      color: var(--primary);
+      font-size: 1.05rem;
+    }
+
+    .contact-item strong {
+      display: block;
+      color: var(--text-dark);
+      margin-bottom: 3px;
+    }
+
+    .contact-item span {
+      color: var(--muted);
+    }
+
+    .cta {
+      padding: 34px;
+      border: 0;
+      background:
+        radial-gradient(circle at top right, rgba(255, 159, 28, 0.28), transparent 30%),
+        linear-gradient(135deg, #0f2c59, #103a72);
+      color: var(--white);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .cta h3 {
+      color: var(--white);
+      font-size: clamp(1.55rem, 2.6vw, 2.3rem);
+      line-height: 1.25;
+      margin-bottom: 14px;
+    }
+
+    .cta p {
+      color: rgba(255, 255, 255, 0.78);
+      margin-bottom: 26px;
+      max-width: 560px;
+    }
+
+    footer {
+      background: var(--dark);
+      color: #bdd0f0;
+      padding: 34px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      font-weight: 800;
+      color: var(--white);
+    }
+
+    .footer-brand span {
+      color: var(--accent);
+    }
+
+    .floating-wa {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 1001;
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #25d366;
+      color: var(--white);
+      font-size: 1.5rem;
+      box-shadow: 0 16px 35px rgba(37, 211, 102, 0.32);
+      transition: transform 0.3s ease;
+    }
+
+    .floating-wa:hover {
+      transform: scale(1.08);
+    }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      display: none;
+      place-items: center;
+      padding: 30px;
+      background: rgba(3, 8, 18, 0.92);
+      z-index: 1200;
+    }
+
+    .lightbox.open {
+      display: grid;
+    }
+
+    .lightbox img {
+      width: auto;
+      max-width: min(1000px, 92vw);
+      max-height: 82vh;
+      object-fit: contain;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 26px;
+      border: 0;
+      background: transparent;
+      color: var(--white);
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 1080px) {
+      .feature-grid,
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero-grid,
+      .about-grid,
+      .service-layout,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-panel img,
+      .hero-panel-placeholder {
+        min-height: 420px;
+        height: 420px;
+      }
+
+      .service-media img,
+      .service-media-placeholder {
+        min-height: 300px;
+      }
+    }
+
+    @media (max-width: 820px) {
+      .menu {
+        position: fixed;
+        top: 84px;
+        left: 4%;
+        right: 4%;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 16px;
+        border-radius: 20px;
+        background: rgba(7, 18, 40, 0.96);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+      }
+
+      .menu.open {
+        display: flex;
+      }
+
+      .menu li {
+        width: 100%;
+      }
+
+      .menu a {
+        display: block;
+        padding: 13px 14px;
+        border-radius: 14px;
+      }
+
+      .menu a:hover {
+        background: rgba(255, 255, 255, 0.06);
+      }
+
+      .burger {
+        display: block;
+      }
+
+      .hero {
+        padding-top: 125px;
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        justify-content: center;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container topbar">
+      <a href="#home" class="brand">
+        <span class="brand-text">NIKA<span>WAN</span> SOLUSINDO</span>
+        <img
+          src="logo-white.png"
+          alt="Logo Nikawan Solusindo"
+          class="brand-logo"
+          onload="this.style.display='block'; this.previousElementSibling.style.display='none';"
+          onerror="this.style.display='none';"
+        />
+      </a>
+
+      <button class="burger" id="menuToggle" aria-label="Buka menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="menu" id="navMenu">
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#layanan">Layanan</a></li>
+        <li><a href="#galeri">Galeri</a></li>
+        <li><a href="#proses">Proses</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">
+            <i class="fa-solid fa-bolt"></i>
+            PT Nikawan Solusindo Sejahtera
+          </span>
+
+          <h1>Solusi Perawatan & Perbaikan Mesin Industri yang Andal dan Profesional</h1>
+
+          <p class="lead">
+            Kami membantu menjaga kelancaran operasional industri melalui layanan perawatan preventif,
+            perbaikan mesin dan alat listrik, pengujian teknis, hingga improvement sistem secara terukur.
+          </p>
+
+          <div class="hero-actions">
+            <a href="https://wa.me/6282249804379" class="btn btn-primary" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp"></i>
+              Minta Penawaran
+            </a>
+            <a href="#layanan" class="btn btn-secondary">
+              <i class="fa-solid fa-arrow-down"></i>
+              Lihat Layanan
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <strong>Preventive</strong>
+              <span>Perawatan terencana untuk mengurangi downtime</span>
+            </div>
+            <div class="stat">
+              <strong>Troubleshooting</strong>
+              <span>Penanganan gangguan mesin & panel listrik</span>
+            </div>
+            <div class="stat">
+              <strong>Improvement</strong>
+              <span>Upgrade performa peralatan industri</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-panel reveal" id="heroPanel">
+          <img
+            src="assets/hero.jpg"
+            alt="Dokumentasi proyek Nikawan Solusindo"
+            onerror="this.style.display='none'; document.getElementById('heroPanel').classList.add('hero-panel-placeholder');"
+          />
+          <div class="hero-card">
+            <h3>Maintenance & Electrical Industrial Services</h3>
+            <p>Panel listrik, transformator, genset, pengujian, perbaikan mesin, dan improvement sistem industri.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="tentang">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="kicker">Tentang Kami</span>
+          <h2>Mitra teknis untuk keandalan operasional industri</h2>
+          <p>
+            PT Nikawan Solusindo Sejahtera menghadirkan layanan teknis yang berfokus pada kualitas,
+            keamanan, dan keberlanjutan operasional pelanggan.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-panel panel reveal">
+            <h3>Profil Singkat</h3>
+            <p>
+              PT Nikawan Solusindo Sejahtera adalah perusahaan yang berfokus pada jasa perbaikan,
+              perawatan, pengujian, dan peningkatan performa peralatan industri. Dengan pendekatan
+              yang terstruktur dan berorientasi pada hasil, kami mendukung kelancaran operasional
+              fasilitas industri Anda.
+            </p>
+
+            <ul class="list">
+              <li>
+                <i class="fa-solid fa-check"></i>
+                <span>Solusi menyeluruh untuk kebutuhan maintenance industri.</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>
+                <span>Ditangani oleh tim teknis yang berpengalaman di lapangan.</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>
+                <span>Mengutamakan kualitas, keamanan, dan kepuasan pelanggan.</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>
+                <span>Responsif, komunikatif, dan berorientasi pada solusi.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="about-panel panel reveal">
+            <h3>Visi & Misi</h3>
+            <p>
+              Kami berkomitmen menjadi mitra jangka panjang bagi pelanggan melalui layanan yang
+              profesional, inovatif, dan dapat diandalkan.
+            </p>
+
+            <ul class="list">
+              <li>
+                <i class="fa-solid fa-eye"></i>
+                <span>Menjadi mitra terpercaya untuk solusi perawatan dan perbaikan mesin industri.</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-gears"></i>
+                <span>Menyediakan layanan preventif yang efisien untuk memperpanjang umur pakai peralatan.</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Mengedepankan pengujian yang akurat, aman, dan dapat dipertanggungjawabkan.</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-handshake"></i>
+                <span>Membangun hubungan jangka panjang dengan pelanggan melalui layanan yang profesional.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section features">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="kicker">Mengapa Kami</span>
+          <h2>Keunggulan yang dirancang untuk kebutuhan industri</h2>
+          <p>
+            Kami menghadirkan layanan yang tidak hanya cepat, tetapi juga rapi, aman, dan berorientasi pada hasil.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <div class="feature reveal">
+            <div class="icon">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <h3>Solusi Komprehensif</h3>
+            <p>
+              Satu mitra untuk kebutuhan perawatan, perbaikan, pengujian, dan improvement peralatan industri.
+            </p>
+          </div>
+
+          <div class="feature reveal">
+            <div class="icon">
+              <i class="fa-solid fa-user-gear"></i>
+            </div>
+            <h3>Tim Berpengalaman</h3>
+            <p>
+              Dikerjakan oleh teknisi yang terbiasa menangani panel listrik, mesin industri, dan utilitas pabrik.
+            </p>
+          </div>
+
+          <div class="feature reveal">
+            <div class="icon">
+              <i class="fa-solid fa-medal"></i>
+            </div>
+            <h3>Kualitas Terjaga</h3>
+            <p>
+              Setiap pekerjaan diarahkan pada hasil yang aman, rapi, presisi, dan dapat dipertanggungjawabkan.
+            </p>
+          </div>
+
+          <div class="feature reveal">
+            <div class="icon">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <h3>Respons Cepat</h3>
+            <p>
+              Komunikasi cepat melalui WhatsApp untuk konsultasi, survei, dan kebutuhan penawaran.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="layanan">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="kicker">Layanan Kami</span>
+          <h2>Layanan industrial yang terstruktur dan mudah dipahami</h2>
+          <p>
+            Setiap layanan disusun untuk mendukung keandalan aset, efisiensi operasional, dan keamanan fasilitas industri.
+          </p>
+        </div>
+
+        <div class="tabs reveal">
+          <button class="tab-btn active" data-tab="perawatan">Perawatan Preventif</button>
+          <button class="tab-btn" data-tab="perbaikan">Perbaikan & Troubleshooting</button>
+          <button class="tab-btn" data-tab="improvement">Improvement & Upgrade</button>
+          <button class="tab-btn" data-tab="pengujian">Pengujian & Kalibrasi</button>
+        </div>
+
+        <div class="tab-pane active" id="perawatan">
+          <div class="service-layout">
+            <div class="service-media reveal">
+              <img
+                src="assets/layanan-perawatan.jpg"
+                alt="Perawatan panel listrik industri"
+                onerror="this.style.display='none'; this.parentElement.classList.add('service-media-placeholder');"
+              />
+            </div>
+            <div class="service-body panel reveal">
+              <h3>Perawatan Preventif</h3>
+              <p>
+                Program perawatan berkala untuk menjaga stabilitas performa aset industri, menekan risiko
+                downtime, dan memperpanjang usia pakai peralatan.
+              </p>
+
+              <div class="chips">
+                <span class="chip">Panel Tegangan Menengah</span>
+                <span class="chip">Panel Tegangan Rendah</span>
+                <span class="chip">Transformator</span>
+                <span class="chip">Genset</span>
+                <span class="chip">Mesin Produksi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="perbaikan">
+          <div class="service-layout">
+            <div class="service-media">
+              <img
+                src="assets/layanan-perbaikan.jpg"
+                alt="Perbaikan mesin industri"
+                onerror="this.style.display='none'; this.parentElement.classList.add('service-media-placeholder');"
+              />
+            </div>
+            <div class="service-body panel">
+              <h3>Perbaikan & Troubleshooting</h3>
+              <p>
+                Analisa gangguan, identifikasi akar masalah, perbaikan komponen elektrikal dan mekanikal,
+                serta uji fungsi untuk mengembalikan operasional secara optimal.
+              </p>
+
+              <div class="chips">
+                <span class="chip">Analisa Gangguan Panel</span>
+                <span class="chip">Perbaikan Sistem Kontrol</span>
+                <span class="chip">Perbaikan Motor Listrik</span>
+                <span class="chip">Troubleshooting Elektrikal</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="improvement">
+          <div class="service-layout">
+            <div class="service-media">
+              <img
+                src="assets/layanan-improvement.jpg"
+                alt="Improvement sistem industri"
+                onerror="this.style.display='none'; this.parentElement.classList.add('service-media-placeholder');"
+              />
+            </div>
+            <div class="service-body panel">
+              <h3>Improvement & Upgrade</h3>
+              <p>
+                Penyesuaian dan peningkatan sistem agar lebih aman, efisien, dan sesuai dengan kebutuhan
+                operasional terbaru.
+              </p>
+
+              <div class="chips">
+                <span class="chip">Modifikasi Panel</span>
+                <span class="chip">Upgrade Busbar</span>
+                <span class="chip">Optimasi Sistem ATS</span>
+                <span class="chip">Penataan Ulang Instalasi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="pengujian">
+          <div class="service-layout">
+            <div class="service-media">
+              <img
+                src="assets/layanan-pengujian.jpg"
+                alt="Pengujian peralatan listrik"
+                onerror="this.style.display='none'; this.parentElement.classList.add('service-media-placeholder');"
+              />
+            </div>
+            <div class="service-body panel">
+              <h3>Pengujian & Kalibrasi</h3>
+              <p>
+                Pengujian teknis untuk memastikan keandalan, keamanan, dan kesiapan operasi peralatan
+                listrik serta sistem pendukungnya.
+              </p>
+
+              <div class="chips">
+                <span class="chip">IR Test</span>
+                <span class="chip">Hipot Test</span>
+                <span class="chip">Commissioning</span>
+                <span class="chip">Pengecekan Proteksi</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="galeri">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="kicker">Galeri Proyek</span>
+          <h2>Dokumentasi pekerjaan dan aktivitas teknis</h2>
+          <p>
+            Galeri ini menampilkan dokumentasi proyek perusahaan secara dinamis.
+          </p>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+          <div class="gallery-loading">Memuat galeri...</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark" id="proses">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="kicker">Alur Kerja</span>
+          <h2>Proses kerja yang jelas dan terstruktur</h2>
+          <p>
+            Setiap proyek dijalankan melalui tahapan yang rapi untuk memastikan hasil yang konsisten dan dapat dipertanggungjawabkan.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-card panel reveal">
+            <span class="step">Step 01</span>
+            <h3>Konsultasi & Survei</h3>
+            <p>
+              Diskusi kebutuhan dan pemeriksaan kondisi aktual di lapangan untuk menentukan pendekatan terbaik.
+            </p>
+          </div>
+
+          <div class="process-card panel reveal">
+            <span class="step">Step 02</span>
+            <h3>Analisa & Penawaran</h3>
+            <p>
+              Penyusunan analisa kebutuhan, ruang lingkup pekerjaan, dan penawaran yang jelas.
+            </p>
+          </div>
+
+          <div class="process-card panel reveal">
+            <span class="step">Step 03</span>
+            <h3>Eksekusi & Testing</h3>
+            <p>
+              Pekerjaan dilakukan secara profesional dan dilanjutkan dengan pengujian untuk memastikan hasil.
+            </p>
+          </div>
+
+          <div class="process-card panel reveal">
+            <span class="step">Step 04</span>
+            <h3>Laporan & Maintenance</h3>
+            <p>
+              Hasil kerja dilengkapi laporan, dokumentasi, serta rekomendasi perawatan lanjutan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="kontak">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-panel panel reveal">
+            <span class="kicker">Kontak</span>
+            <h3>Hubungi Kami</h3>
+            <p>
+              Tim kami siap membantu kebutuhan perawatan, perbaikan, dan pengujian fasilitas industri Anda.
+            </p>
+
+            <div class="contact-item">
+              <i class="fab fa-whatsapp"></i>
+              <div>
+                <strong>WhatsApp</strong>
+                <span>+62 822-4980-4379</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <strong>Email</strong>
+                <span>info@nikawan-solusindo.com</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <strong>Lokasi</strong>
+                <span>Tangerang, Indonesia</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <i class="fa-solid fa-clock"></i>
+              <div>
+                <strong>Jam Operasional</strong>
+                <span>Senin - Sabtu, 08.00 - 17.00</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta panel reveal">
+            <h3>Diskusikan kebutuhan perawatan dan perbaikan fasilitas industri Anda</h3>
+            <p>
+              Sampaikan kebutuhan Anda melalui WhatsApp, dan tim kami akan membantu memberikan solusi
+              yang sesuai dengan kondisi lapangan.
+            </p>
+            <a href="https://wa.me/6282249804379" class="btn btn-primary" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp"></i>
+              Chat WhatsApp Sekarang
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        NIKA<span>WAN</span> SOLUSINDO
+      </div>
+      <div>
+        &copy; 2026 PT Nikawan Solusindo Sejahtera. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/6282249804379" class="floating-wa" target="_blank" rel="noopener" aria-label="Chat WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Tutup gambar">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <img id="lightboxImage" src="" alt="Preview galeri" />
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+    const menuIcon = menuToggle.querySelector("i");
+
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("open");
+      menuIcon.classList.toggle("fa-bars");
+      menuIcon.classList.toggle("fa-xmark");
+    });
+
+    document.querySelectorAll(".menu a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("open");
+        menuIcon.classList.add("fa-bars");
+        menuIcon.classList.remove("fa-xmark");
+      });
+    });
+
+    const tabButtons = document.querySelectorAll(".tab-btn");
+    const tabPanes = document.querySelectorAll(".tab-pane");
+
+    tabButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        tabButtons.forEach((btn) => btn.classList.remove("active"));
+        tabPanes.forEach((pane) => pane.classList.remove("active"));
+
+        button.classList.add("active");
+        document.getElementById(button.dataset.tab).classList.add("active");
+        observeReveal();
+      });
+    });
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const lightboxClose = document.getElementById("lightboxClose");
+
+    function openLightbox(src) {
+      lightboxImage.src = src;
+      lightbox.classList.add("open");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove("open");
+      document.body.style.overflow = "";
+    }
+
+    lightboxClose.addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && lightbox.classList.contains("open")) {
+        closeLightbox();
+      }
+    });
+
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.16 }
+    );
+
+    function observeReveal() {
+      document.querySelectorAll(".reveal:not([data-reveal])").forEach((el) => {
+        el.dataset.reveal = "true";
+        revealObserver.observe(el);
+      });
+    }
+
+    observeReveal();
+
+    const galleryGrid = document.getElementById("galleryGrid");
+
+    galleryGrid.addEventListener("click", (event) => {
+      const item = event.target.closest(".gallery-item");
+      if (!item) return;
+
+      const img = item.querySelector("img");
+      if (img) openLightbox(img.src);
+    });
+
+    const IMAGE_PATTERN = /\.(png|jpe?g|webp|gif|svg|avif)$/i;
+
+    function renderGallery(images) {
+      galleryGrid.innerHTML = "";
+
+      if (!images.length) {
+        galleryGrid.innerHTML = '<div class="gallery-empty">Belum ada foto di galeri.</div>';
+        return;
+      }
+
+      images.forEach((src, index) => {
+        const figure = document.createElement("figure");
+        figure.className = "gallery-item reveal";
+
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = "Dokumentasi proyek " + (index + 1);
+        img.loading = "lazy";
+
+        figure.appendChild(img);
+        galleryGrid.appendChild(figure);
+      });
+
+      observeReveal();
+    }
+
+    async function loadGithubGallery() {
+      const host = window.location.hostname;
+
+      if (!host.endsWith(".github.io")) {
+        return false;
+      }
+
+      const owner = host.split(".")[0];
+      const pathParts = window.location.pathname.split("/").filter(Boolean);
+
+      let repo = host;
+
+      if (pathParts[0] && !/\.(html?|xml|json|txt)$/i.test(pathParts[0])) {
+        repo = pathParts[0];
+      }
+
+      const endpoints = [
+        `https://api.github.com/repos/${owner}/${repo}/contents/galeri`,
+        `https://api.github.com/repos/${owner}/${repo}/contents/galeri?ref=main`,
+        `https://api.github.com/repos/${owner}/${repo}/contents/galeri?ref=master`,
+        `https://api.github.com/repos/${owner}/${repo}/contents/galeri?ref=gh-pages`
+      ];
+
+      for (const endpoint of endpoints) {
+        try {
+          const response = await fetch(endpoint, {
+            headers: {
+              Accept: "application/vnd.github+json"
+            }
+          });
+
+          if (!response.ok) continue;
+
+          const files = await response.json();
+
+          if (!Array.isArray(files)) continue;
+
+          const images = files
+            .filter((file) => file.type === "file" && IMAGE_PATTERN.test(file.name))
+            .sort((a, b) => a.name.localeCompare(b.name))
+            .map((file) => file.download_url)
+            .filter(Boolean);
+
+          if (images.length) {
+            renderGallery(images);
+            return true;
+          }
+        } catch (error) {
+          continue;
+        }
+      }
+
+      return false;
+    }
+
+    async function loadGallery() {
+      const loadedFromGithub = await loadGithubGallery();
+
+      if (!loadedFromGithub) {
+        renderGallery([]);
+      }
+    }
+
+    loadGallery();
+  </script>
+</body>
+</html>
